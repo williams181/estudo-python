@@ -1,5 +1,6 @@
-
-#Metodo do corno
+"""
+Ler 2 strings e dizer quantas vezes o primeiro aparece no segundo
+"""
 
 s1 = input('Busca')
 s2 = input('Texto')

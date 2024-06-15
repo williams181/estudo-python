@@ -3,13 +3,14 @@ Construir uma tabela de conversão de graus Fahrenheit para Celsius, para todos 
 Obs: C = (F - 32) * 5/9
 """
 
-Temp01 = int(input('Digite o primeiro valor'))
-Temp02 = int(input('Digite o segundo valor'))
+li = int(input('Digite o 1º valor do intervalo:'))
+ls = int(input('Digite o 2º valor do intervalo:'))
 
-if (Temp01 > Temp02):
-        Temp01, Temp02 = Temp02, Temp01
+if li > ls:
+    aux = li
+    li = ls
+    ls = aux
 
-for i in range(Temp01,Temp02+1):
-
-    
-    print(i,'Temperatura', (i-32)* 5/9) 
+print('Tabela de Conversão\nCelsius\t|\tFahrenheit')
+for it in range(li, ls+1):
+    print(it, '\t\t|', (it-32)*5/9)

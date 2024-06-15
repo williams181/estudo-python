@@ -1,5 +1,5 @@
 """
-Somar os inteiros pares entre 50 e 100 (inclusive) # for
+Somar os inteiros pares entre 50 e 100 (inclusive)
 """
 
 Soma = 0
