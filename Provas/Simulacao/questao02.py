@@ -30,7 +30,7 @@ if qtd5 == 0:
     print("Nenhum múltiplo de 5 com 2 dígitos foi digitado.")
 else:
     mult5 = mult5[:qtd5]
-    mult5.reverse()
+    mult5.reverse() # não pode reverse
     print("Múltiplos de 5 com 2 dígitos significativos:", mult5)
 if maiorNaoMult7 == -999999999999:
     print("Nenhum não múltiplo de 7 foi digitado.")

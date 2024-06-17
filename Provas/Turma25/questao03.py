@@ -47,6 +47,9 @@ for i in range(n):
         print("Erro no arquivo da universidade", nome)
 print("Fim do programa!")
 
+
+# serafin
+
 nomeArq = input('Nome do arquivo: ')
 disc = discIF3 = credIF3 = 0
 try:

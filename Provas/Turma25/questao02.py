@@ -20,7 +20,7 @@ while num == 0:
 while num != 0 and qtd < maximo:
     qtd += 1
     if num < 0:
-        neg += 1
+        neg = neg + 1
         if num < menorNeg:
             menorNeg = num
     else:
@@ -42,7 +42,7 @@ else:
     for i in range(qtd4d):
         if pos4d[i] < 5100:
             print(pos4d[i], end=', ')
-    for i in range(qtd4d - 1, -1, -1):
+    for i in range(qtd4d - 1, -1, -1): # inversa
         if pos4d[i] >= 5100:
             print(pos4d[i], end=', ')
     print('')
