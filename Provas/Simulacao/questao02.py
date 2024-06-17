@@ -9,7 +9,7 @@ como resultado (nesta ordem):
 
 qtd = 0
 qtd5 = 0
-mult5 = [0] * 150
+mult5 = [0] * 7
 maiorNaoMult7 = -999999999999
 num = int(input("Digite um número negativo: "))
 
