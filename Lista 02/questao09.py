@@ -5,14 +5,16 @@ lido deve ser o primeiro a ser impresso.
 """
 numbers = []
 
-while True:
+num = int(input("Digite um número inteiro (negativo para parar): "))
+
+while num > 0:
     num = int(input("Digite um número inteiro (negativo para parar): "))
-    if num < 0:
-        break
     if 10 <= num <= 99:
         numbers.append(num)
 
-i = len(numbers) - 1
-while i >= 0:
-    print(numbers[i])
-    i -= 1
+numeros_invertidos = []
+
+for i in range(len(numbers) -1, -1, -1):
+    numeros_invertidos.append(numbers[i])
+    
+print(numeros_invertidos)

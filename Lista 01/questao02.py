@@ -7,7 +7,7 @@ n1 = int(input("numero1: "))
 n2 = int(input("numero2: "))
 
 result = n1 % n2
-resultQuad = result * result
+resultQuad = result ** 2
 
 if result == 0:
     print("result",n1)

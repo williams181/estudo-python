@@ -6,15 +6,16 @@ Calcular o valor de S com N termos, onde N é informado pelo usuário e:
 """
 # a. S = 1 + 3/2 + 5/3 + 7/4 + ...
 
-n = int(input('Digite o número de termos:'))
-s = 0.0 
-nu = 1 
-de = 1
-for it in range(1,n+1):
-    print(f"{nu}/{it}")
-    s = s + nu/it 
-    nu = nu + 2 
-print('A soma dos',n,'termos da sequência 6.a. é',s)
+numeroDeTermos = int(input('Digite o número de termos:'))
+soma = 0.0 
+numerador = 1 
+for it in range(1,numeroDeTermos+1):
+    print(f"serie: {numerador}/{it}")
+    soma = soma + numerador/it 
+    print(f"soma: {soma}")
+    numerador = numerador + 2 
+    print(f"numerador: {numerador}")
+print('A soma dos',numeroDeTermos,'termos da sequência 6.a. é',soma)
 
 # b. S = 2/500 - 5/490 + 2/480 - 5/470 + ..
 
@@ -25,12 +26,19 @@ nu = 2
 for it in range(1, n+1):
     if de != 0: 
         if nu == 2: 
+            print(f"serie: {nu}/{de}")
             s = s + nu/de
+            print(f"soma: {s}")
             nu = 5
+            print(f"numerador: {nu}")
         else: 
-            s = s - nu/de 
+            print(f"serie: {nu}/{de}")
+            s = s - nu/de
+            print(f"soma: {s}") 
             nu = 2
+            print(f"numerador: {nu}")
         de = de - 10 
+        print(f"denominador; {de}")
     else:
         print('A variável',de,'atingiu o valor nulo e a divisão por 0 é impossível.')
 print('A soma dos', n, 'termos da sequência 6.b. é', s)
