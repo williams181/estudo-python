@@ -64,7 +64,7 @@ def MelhoresClientes(nomeEmp, val):
     nomeEmp = nomeEmp + ".txt"
     try:
         arqEnt = open(nomeEmp, 'r')
-        arqSai = open('C:\\Users\\william\\' + novoArq, 'w')
+        arqSai = open(novoArq, 'w')
         qtd = 0
         soma = 0
         for linha in arqEnt:

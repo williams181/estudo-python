@@ -43,7 +43,7 @@ for it in range(1, n+1):
         print('A variável',de,'atingiu o valor nulo e a divisão por 0 é impossível.')
 print('A soma dos', n, 'termos da sequência 6.b. é', s)
 
-# c. S = 3738/1 + 3657/2 + 35*36/3 + ...
+# c. S = 37*38/1 + 36*57/2 + 35*36/3 + ...
 
 n = int(input('Digite o número de termos:'))
 s = 0.0

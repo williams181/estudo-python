@@ -9,7 +9,7 @@ só deve digitar no maximo 150 números válidos. O prgrama deve imprimir as seg
   OBS1: Não pode usar as funções/métodos len, min, max, sum, nem sort.
 """
 
-maximo = 150
+maximo = 7
 pos4d = [0] * maximo
 qtd = neg = menorNeg = qtd4d = med4d = 0
 
@@ -20,7 +20,7 @@ while num == 0:
 while num != 0 and qtd < maximo:
     qtd += 1
     if num < 0:
-        neg += 1
+        neg = neg + 1
         if num < menorNeg:
             menorNeg = num
     else:
@@ -42,10 +42,9 @@ else:
     for i in range(qtd4d):
         if pos4d[i] < 5100:
             print(pos4d[i], end=', ')
-    for i in range(qtd4d - 1, -1, -1):
+    for i in range(qtd4d - 1, -1, -1): # inversa
         if pos4d[i] >= 5100:
             print(pos4d[i], end=', ')
-    print('')
     med4d = med4d / qtd4d
     print('Média dos positivos de 4 dígitos =', med4d)
 
