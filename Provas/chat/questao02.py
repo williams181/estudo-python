@@ -27,7 +27,7 @@ if qtd3 == 0:
     print("Nenhum múltiplo de 3 com 2 dígitos foi digitado.")
 else:
     mult3 = mult3[:qtd3]
-    mult3.reverse()  # Inverte a ordem dos múltiplos de 3
+    mult3.reverse()  # não usar reverse
     print("Múltiplos de 3 com 2 dígitos significativos:", mult3)
 
 if maiorNaoMult4 == -999999999999:
@@ -94,7 +94,7 @@ negativos = 0
 positivos4dig = []
 somaPositivos4dig = 0
 qtdPositivos4dig = 0
-menorNegativo = 999999999999
+menorNegativo = -999999999999
 num = int(input("Digite um número inteiro (0 para parar): "))
 while num != 0 and qtd < 150:
     qtd += 1
