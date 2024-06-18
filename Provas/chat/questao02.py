@@ -68,7 +68,7 @@ while (num != -888888) and (qtd < maximo):
     qtd += 1
     if (num < 0):
         neg += 1
-        if (num > maiorNeg):
+        if (maiorNeg < num):
             maiorNeg = num 
         if (num < -9) and (num > -100):
             pos2d[qtd2d] = num
@@ -83,19 +83,23 @@ while (num != -888888) and (qtd < maximo):
 if (qtd2d == 0):
     print('Não foi digitado um numero de 2 digitios!')
 else:
-    print('Positivos de 4 dígitos: ', end='')
+    # print('Positivos de 4 dígitos: ', end='')
     for i in range(qtd2d):
-        print(pos2d[i], end=', ')
+        if pos2d[i] > 0:
+            print(pos2d[i])
     for i in range(qtd2d -1, -1, -1):
-        print(pos2d[i], end=', ')
+        if pos2d[i] < 0:
+            print(pos2d[i])
 
-if (somaNeg == 0) and (neg == 0):
+if (somaNeg == 0):
     print("Não foi digitado um numero negativo!")
 else:
     print("A quantidade de numeros negativos é igual a: ",neg)
     print("A soma dos numeros negativos é igual a: ",somaNeg)
+    print("A quantidade de numeros lidos e igual a: ",qtd)
 
-  
+# chat
+
 qtd = 0
 num3dig = []
 somaPositivos = 0

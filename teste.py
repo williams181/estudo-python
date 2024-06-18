@@ -1,48 +1,45 @@
 """
-Faça um programa Python para ler uma sequência de números inteiros - a leitura para quando o número -888888 for lido. No entanto, o usuário só deve poder digitar no máximo 300 números. O programa deve imprimir as seguintes informações como resultado:
-
-  * A quantidade total de números lidos.
-  * Os números lidos cujos valores tiverem 2 dígitos significativos. A impressão destes números deve mostrar primeiro os números positivos (de 2 dígitos), na mesma ordem relativa em que foram lidos, e depois os negativos (idem).
-  * A soma dos números negativos de 2 dígitos impressos no item anterior.
-  * O maior número negativo lido.
+Faça um programa Python para ler uma sequencia de números inteiros negativos - a leitura para quando o número zero for lido.
+No entanto, o usuário só deve poder digitar no maximo 150 números negativos. O programa deve imprirmir as seguintes informações
+como resultado (nesta ordem):
+  * Os números lidos cujos valores tem 2 dígitos significativos e também são múltiplos de 5.
+    A impressão destes números deve ser feita na ordem inversa da que foram lidos.
+  * O maior número lido que não seja múltiplo de 7.
 """
 
-maximo = 300
-pos2d = [0] * maximo
-qtd = neg = maiorNeg = qtd2d = somaNeg = 0
-num = int(input("Digite um numero para começar: "))
-while num == 0:
-    num = int(input('Digite um numero valido diferente de 0: '))
+maximo = 150
+pos2dMult5 = [0] * 150
+qtd = qtd5 = 0
+maiorNaoMult7 = -999999999
+lista_inverso = []
 
-while (num != -888888) and (qtd < maximo):
+num = int(input("Difite um numero para iniciar: "))
+
+while num >= 0:
+    num = int(input("Digite pelo menos um número negativo: "))
+
+while (num != 0) and (qtd < 150):
     qtd += 1
-    if (num < 0):
-        neg += 1
-        if (num > maiorNeg):
-            maiorNeg = num 
-        if (num < -9) and (num > -100):
-            pos2d[qtd2d] = num
-            somaNeg += num
-            qtd2d += 1
-    elif (num > 9) and (num < 99):
-        pos2d[qtd2d] = num
-        qtd2d += 1
+    if (num < -9) and (num > -100):
+        if (num % 5 == 0):
+            pos2dMult5[qtd5] = num
+            qtd5 += 1
+        if (num % 7 != 0) and (num > maiorNaoMult7):
+            maiorNaoMult7 = num
+    num = int(input("Digite outro número negativo, 0 p/parar: "))
+    while num > 0:
+        num = int(input("Digite um número negativo, 0 p/parar: "))
 
-    num = int(input("Digite outro numero, -888888 p/parar: "))
-
-if (qtd2d == 0):
-    print('Não foi digitado um numero de 2 digitios!')
+if qtd5 == 0:
+    print("Sem múltiplo de 5 com 2 digitos foi digitado.")
 else:
-    print('Positivos de 4 dígitos: ', end='')
-    for i in range(qtd2d):
-        print(pos2d[i], end=', ')
-    for i in range(qtd2d -1, -1, -1):
-        print(pos2d[i], end=', ')
+    for i in range(qtd5 -1, -1, -1):
+        print(pos2dMult5[i]) 
 
-if (somaNeg == 0) and (neg == 0):
-    print("Não foi digitado um numero negativo!")
+if maiorNaoMult7 == -999999999:
+    print("Sem numeros não multiplos de 7.")
 else:
-    print("A quantidade de numeros negativos é igual a: ",neg)
-    print("A soma dos numeros negativos é igual a: ",somaNeg)
+    print("o maior não multiplo de 7 é: ",maiorNaoMult7)
 
-  
+        
+
