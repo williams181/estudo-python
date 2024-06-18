@@ -42,7 +42,7 @@ else:
     for i in range(qtd4d):
         if pos4d[i] < 5100:
             print(pos4d[i], end=', ')
-    for i in range(qtd4d - 1, -1, -1): # inversa
+    for i in range(qtd4d-1, -1, -1): # inversa
         if pos4d[i] >= 5100:
             print(pos4d[i], end=', ')
     med4d = med4d / qtd4d
