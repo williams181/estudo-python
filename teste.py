@@ -13,7 +13,7 @@ qtd = qtd5 = 0
 maiorNaoMult7 = -999999999
 lista_inverso = []
 
-num = int(input("Difite um numero para iniciar: "))
+num = int(input("Digite um numero para iniciar: "))
 
 while num >= 0:
     num = int(input("Digite pelo menos um número negativo: "))
