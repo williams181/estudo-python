@@ -12,9 +12,7 @@ numerador = 1
 for it in range(1,numeroDeTermos+1):
     print(f"serie: {numerador}/{it}")
     soma = soma + numerador/it 
-    print(f"soma: {soma}")
     numerador = numerador + 2 
-    print(f"numerador: {numerador}")
 print('A soma dos',numeroDeTermos,'termos da sequência 6.a. é',soma)
 
 # b. S = 2/500 - 5/490 + 2/480 - 5/470 + ..

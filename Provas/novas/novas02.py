@@ -22,11 +22,10 @@ while (num != 0) and (qtd < 400):
     qtd +=1
     if (num > 0):
         qtdPos += 1
-        if (num > 9999) and (num < 100000):
-            if (num % 5 == 0):
-                pos5Mul5[pos] = num
-                pos += 1
-                medPos += num
+        if (num > 9999) and (num < 100000) and (num % 5 == 0):
+            pos5Mul5[pos] = num
+            pos += 1
+            medPos += num
         if (maiorPos < num):
             maiorPos = num
     elif (num < 0):

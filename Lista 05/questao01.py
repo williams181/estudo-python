@@ -29,3 +29,31 @@ arquivo_antigo.close()
 arquivo_novo.close()
 print("Número de disciplinas no arquivo antigo:", total_disciplinas)
 print("Número de disciplinas com número de créditos alterados:", total_alteradas)
+
+
+# versão feita em sala
+
+try:
+
+    arqEnt = open('Q1-arqDiscip.old', 'r')
+    arqSai = open('discip.new','w')
+    qtdDic = qtdAlt = cargHor = 0
+    for linha in arqEnt:
+        codigo = linha[0:5]
+        nome = linha[6:41]
+        cred = linha[42:44]
+        credInt = int(cred)    
+        if codigo != 'IF125' and codigo != 'IF380':
+
+            if codigo[0:1] == 'MA':
+                cred = 5
+                qtdAlt +=1
+            cargHor += credInt * 5
+            qtdDic += 1
+            arqSai.write("%s %s %d %.0f\n" % (codigo, nome, credInt, cargHor))
+    arqEnt.close()
+    arqSai.close()
+    print("O numero de disciplinas no arquivo: ",qtdDic)
+    print("O numero de disciplinas com numero de creditos alterados: ",qtdAlt)
+except IOError:
+    print("Não funcionou")

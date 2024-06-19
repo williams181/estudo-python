@@ -21,10 +21,12 @@ def serie(n):
             soma = soma - (n2/d2)
             n2 = n2 + 6
             d2 = d2 + 5
+            print(f"{n2}/{d2}")
         else:
             soma = soma + (n1/d1)
             n1 = n1 * 4
             d1 = d1 * 3
+            print(f"{n1}/{d1}")
     return soma
 qtd = int(input('Digite a quantidade de vezes que deseja calcular o valor da série: '))
 termo = int(input('Quantidade de termos desejados: '))

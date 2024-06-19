@@ -37,10 +37,10 @@ if (qtd3d == 0):
 else:
     # print("Numeros de 3 digitos significativos: ", end='')
     for i in range(qtd3d):
-        if pos3d[i] > 0:
+        if pos3d[i] >= 0:
             print(pos3d[i])
     # print("Numeros de 3 digitos significativos: ", end='')
-    for i in range(qtd3d):
+    for i in range(qtd3d -1, -1, -1):
         if pos3d[i] < 0:
             print(pos3d[i])
 
