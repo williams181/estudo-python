@@ -6,10 +6,10 @@ def MelhoresClientes(arquivo, pontuacao):
 		arqSai = open("C://william/" + arquivo + "Melhores.txt", "w")
 		for linha in arquivo:
 			matricula = linha[0:5]
-			sexo = linha[5:6]
-			pontos = linha[6:13]
+			sexo = linha[6:7]
+			pontos = linha[8:14]
 			postInt = int(pontos)
-			nome = linha[13:49]
+			nome = linha[15:50]
 			if (postInt > pontuacao):
 				arqSai.write("%s, %d," % (matricula, postInt))
 				grav += 1	

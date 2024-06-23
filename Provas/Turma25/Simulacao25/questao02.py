@@ -33,9 +33,9 @@ if qtd == 150:
 if qtd5 == 0:
     print("Nenhum múltiplo de 5 com 2 dígitos foi digitado.")
 else:
-    mult5 = mult5[:qtd5]
-    mult5_inverso = mult5[::-1]
-    print("Múltiplos de 5 com 2 dígitos significativos:", mult5_inverso)
+    print("lista de numeros: ",end='')
+    for i in range(qtd5 - 1, -1, -1):
+        print(mult5[i])
 
 if maiorNaoMult7 == -999999999999:
     print("Nenhum não múltiplo de 7 foi digitado.")

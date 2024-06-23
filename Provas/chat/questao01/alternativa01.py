@@ -15,15 +15,40 @@ def serie(n):
     nu2 = -7
     de = 1
     res = 0.0
-    for i in range(3, n + 4, 2):
-        res += nu1 / math.factorial(de) if de % 2 == 1 else nu2 / math.factorial(de)
-        nu1 = nu1 * 2 + 1
-        nu2 = nu2 * 2 - 1
+    for i in range(2, n + 2):
+        if i % 2 == 0:
+            res = res + nu1 / de
+            nu1 = nu1 * 5
+        else:
+            res = res + nu2 / de
+            nu2 = nu2 * 6
+        de = de * i
+    return res
+
+n = int(input('Digite número de termos (<1 para parar): '))
+while n > 0:
+    r1 = serie(n)
+    print(r1)
+    n = int(input('Digite número de termos (<1 para parar): '))
+    
+    
+def serie(n):
+    nu1 = 5
+    nu2 = -10
+    de = 2
+    res = 0.0
+    for i in range(1, n + 1):
+        if i % 2 != 0:
+            res += nu1 / de
+            nu1 += 5
+        else:
+            res += nu2 / de
+            nu2 -= 5
         de += 2
     return res
 
 n = int(input('Digite número de termos (<1 para parar): '))
 while n > 0:
-    r1 = round(serie(n), 5)
-    print(n, r1)
+    r1 = serie(n)
+    print(r1)
     n = int(input('Digite número de termos (<1 para parar): '))

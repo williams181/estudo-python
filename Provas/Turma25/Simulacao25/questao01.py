@@ -21,11 +21,10 @@ def serie(n):
             res = res + nu2 / de
             nu2 = nu2 * 6
         de = de * i
-        print(f"{nu1}/{i}")
     return res
 
 n = int(input('Digite número de termos(<1 p/parar): '))
 while n > 0:
-    r1 = round(serie(n), 5)
-    print(n, r1)
+    r1 = serie(n)
+    print(r1)
     n = int(input('Digite número de termos(<1 p/parar): '))

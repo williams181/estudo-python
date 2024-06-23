@@ -1,13 +1,25 @@
 """
-Faça um programa Python para ler um arquivo texto. com nome externo a ser informado pelo usuário, contendo informações de todas as
-disciplinas da universidade, uma disciplina por linha. Cada disciplina tem código (string com 5 posições), nome (string com 35 posições),
-é número de créditos (inteiro com 2 posições), com um espaço adicional de separação entre eles. Caso o nome do arquivo não seja correto,
-o seu programa deve informar o usuário que não encontrou o arquivo e terminar a execução. Caso consiga ler o arquivo, o seu programa
+Faça um programa Python para ler um arquivo texto. com 
+nome externo a ser informado pelo 
+usuário, contendo informações de todas as
+disciplinas da universidade, uma disciplina por linha. 
+Cada disciplina tem código 
+(string com 5 posições), nome (string com 35 posições),
+é número de créditos (inteiro com 2 posições), com um 
+espaço adicional de separação 
+entre eles. Caso o nome do arquivo não seja correto,
+o seu programa deve informar o usuário que não encontrou 
+o arquivo e terminar a execução. 
+Caso consiga ler o arquivo, o seu programa
 deve imprimir as seguintes informações:
-  * Os dados (código, nome e créditos) de todas as disciplinas cujos códigos começam por "IF" e terminam por "3" (ex: IF423);
-  * A quantidade de disciplinas impressas no item anterior;
+  * Os dados (código, nome e créditos) de todas as 
+  disciplinas cujos códigos começam 
+  por "IF" e terminam por "3" (ex: IF423);
+  * A quantidade de disciplinas impressas no item 
+  anterior;
   * A soma dos créditos destas disciplinas; e
-  * A quantidade total de disciplinas que existe no arquivo lido.
+  * A quantidade total de disciplinas que existe no
+  arquivo lido.
 """
 
 def Universidade(univer, base):

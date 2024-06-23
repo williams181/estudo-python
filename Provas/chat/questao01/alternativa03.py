@@ -9,9 +9,7 @@ Escrever também um programa principal para perguntar ao usuário a quantidade d
 """
 
 def serie(n):
-    if n <= 0:
-        return 0
-    nu1 = 5
+    nu1 = 5 
     nu2 = -10
     de = 2
     res = 0.0
@@ -25,8 +23,4 @@ def serie(n):
         de += 2
     return res
 
-qtd = int(input('Digite a quantidade de vezes que deseja calcular a série: '))
-for _ in range(qtd):
-    n = int(input('Digite o número de termos: '))
-    resultado = round(serie(n), 4)
-    print(f'O valor da série com {n} termos é {resultado}')
+n = int(input("Digite número de termos (menor 1 um p/parar): "))

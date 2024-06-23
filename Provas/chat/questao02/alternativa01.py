@@ -8,29 +8,34 @@ Faça um programa Python para ler uma sequência de números inteiros - a leitur
   * O maior número lido que não seja múltiplo de 4.
 
 """
-
-qtd = 0
-qtd3 = 0
-mult3 = [0] * 200
+maximo = 200
+pos2d = [0] * maximo
 maiorNaoMult4 = -999999999999
-num = int(input("Digite um número inteiro (-1 para parar): "))
-while num != -1 and qtd < 200:
-    qtd += 1
-    if (num % 3 == 0) and (num > -100) and (num < 100) and (abs(num) > 9):
-        mult3[qtd3] = num
-        qtd3 += 1
-    if (num % 4 != 0) and (num > maiorNaoMult4):
-        maiorNaoMult4 = num
-    num = int(input("Digite outro número inteiro (-1 para parar): "))
+pos = maiorPos = qtd = qtd2 = 0
 
-if qtd3 == 0:
-    print("Nenhum múltiplo de 3 com 2 dígitos foi digitado.")
-else:
-    mult3 = mult3[:qtd3]
-    mult3.reverse()  # não usar reverse
-    print("Múltiplos de 3 com 2 dígitos significativos:", mult3)
+num = int(input("Digite um número inteiro para começar: "))
 
-if maiorNaoMult4 == -999999999999:
-    print("Nenhum número não múltiplo de 4 foi digitado.")
+while num == 0:
+    num = int(input("Digite um número inteiro (-1  p/parar): "))
+    
+while (num != -1) and (qtd < maximo):
+    qtd = qtd + 1
+    if (num > 1):
+        pos = pos + 1
+        if (num <= 99) and (num >= 10):
+            pos2d[qtd2] = num
+            qtd2 += 1
+        if (num % 4 != 0) and (maiorNaoMult4 < num):
+            maiorNaoMult4 = num
+    num = int(input("Digite outro numero, (-1 p/parar): "))
+            
+if (qtd2 == 0):
+    print('Não foi digitado um numero de 2 digitios!')
 else:
-    print("O maior não múltiplo de 4 é", maiorNaoMult4)
+    for i in range(qtd2 - 1, -1, 1):
+        print(pos2d[i])
+
+if (maiorNaoMult4 == -999999999999):
+    print("Não foi digitado um numero não multiplo de 4.") 
+else:
+    print("o maior numero não multiplo de 4 foi: ",maiorNaoMult4)

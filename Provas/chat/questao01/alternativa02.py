@@ -24,8 +24,8 @@ def serie(n):
         de += 2
     return res
 
-qtd = int(input('Digite a quantidade de vezes que deseja calcular a série: '))
-for _ in range(qtd):
-    n = int(input('Digite o número de termos: '))
-    resultado = round(serie(n), 4)
-    print(f'O valor da série com {n} termos é {resultado}')
+n = int(input('Digite número de termos (<1 para parar): '))
+while n > 0:
+    r1 = serie(n)
+    print(r1)
+    n = int(input('Digite número de termos (<1 para parar): '))

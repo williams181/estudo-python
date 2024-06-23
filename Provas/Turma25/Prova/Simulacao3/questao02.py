@@ -8,10 +8,9 @@ num = int(input("Digite um numero para iniciar: "))
 while num > 0:
 	num = int(input("Digite um numero negativo: "))
 	
-
 while (num < 0) and (qtd < maximo):
 	qtd += 1
-	if (num > -100) and (num < -9) and (num % 5 == 0):
+	if (num > -100) and (num < -9):
 		pos2d[qtdNeg] = num
 		qtdNeg += 1
 	if (num % 7 != 0) and (num > maiorMult7):
