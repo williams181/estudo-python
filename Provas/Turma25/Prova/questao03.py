@@ -43,7 +43,6 @@ def Universidade(univer, base):
         print("Disciplinas gravadas!")
     else:
         print("Não há disciplinas gravadas!")
-
 n = int(input("Digite o numero (>0) de disciplinas a processar: "))
 while n < 1:
     n = int(input("Digite o numero (>0) de disciplinas a processar: "))
@@ -58,9 +57,6 @@ for i in range(n):
     except IOError:
         print("Erro no arquivo da universidade", nome)
 print("Fim do programa!")
-
-
-# serafin
 
 nomeArq = input('Nome do arquivo: ')
 disc = discIF3 = credIF3 = 0

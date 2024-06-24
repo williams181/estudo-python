@@ -8,6 +8,7 @@ Faça um programa Python para ler uma sequência de números inteiros - a leitur
   * O maior número lido que não seja múltiplo de 4.
 
 """
+
 maximo = 200
 pos2d = [0] * maximo
 maiorNaoMult4 = -999999999999

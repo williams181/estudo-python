@@ -6,7 +6,6 @@ Faça uma subrotina Python do tipo função para calcular a soma dos N primeiros
 S = 1 - 9/4 + 10/2 - 21/8 + 32/5 - 49/12 + 100/7 + ...
 
 Escrever também um programa principal para perguntar ao usuário a quantidade de vezes (qtd) que ele deseja calcular o valor da série e, em seguida, os números de termos desejados nestas qtd vezes. Para cada um deles, seu programa deve usar a função e imprimir o resultado da série (com 4 casas decimais), da seguinte forma: "O valor da série com ... termos é ...".
-
 """
 
 def serie(n):

@@ -7,7 +7,6 @@ deve retornar zero como resultado caso o número de termos não seja positivo.
 Escrever também um programa principal para perguntar ao usuário a quantidade de vezes (qtd) que ele deseja calcular o valor da série
 e, em seguida, os números de termos desejados nestas qtd vezes. Para cada um deles, seu programa deve usar a função e imprimir o
 resultado da série (com 4 casas decimais), da seguinte forma: "O valor da série com ... termos é ...".
-
 """
 
 def serie(n):
